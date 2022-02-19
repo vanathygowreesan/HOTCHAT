@@ -21,3 +21,88 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+/* Header styling */
+.top-nav{
+    background-color: #1b1b1b;
+    padding: 1rem;
+}
+
+.bottom-nav{
+    background-color: black;
+    padding: 1rem;
+}
+
+
+.site-title, .site-description, .entry-title, .menu-toggle, .custom-logo-link{
+    display: none;
+}
+
+.menu-our-story-container{
+    background-color: black;
+}
+
+.menu-our-story-container a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.logo{
+    text-align: center;
+}
+
+
+.main-navigation{
+    padding-bottom: 1rem;
+}
+
+#primary-menu .menu ul{
+    text-align: center;
+}
+
+
+
+/* Footer styling */
+
+.site-info, .entry-footer{
+    display:none;
+}
+
+.site-footer{
+    background-color: black;
+    padding:1rem;
+    color:white;
+    border-top: #b08764 solid 5px;
+}
+
+.footer-heading{
+    color:#b08764;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+.footer-list{
+    list-style-type: none;
+    
+}
+
+.footer-list li a{
+    color:white;
+    text-decoration: none;
+}
+
+.top-footer-wrapper{
+    border-bottom: #b08764 solid 1px;
+    padding-bottom:1rem;
+}
+
+.copy-rights{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+#secondary{
+    display:none;
+}
+

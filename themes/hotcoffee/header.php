@@ -24,49 +24,60 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+		<div class="grid-x grid-padding-x grid-margin-x top-nav">
+			<div class="large-4 cell"></div>
+
+			<div class="large-4 cell site-branding">
 				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$hotcoffee_description = get_bloginfo( 'description', 'display' );
-			if ( $hotcoffee_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $hotcoffee_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+
+				if (! empty (get_custom_logo())){
+					the_custom_logo();
+
+				}else{
+
+					if ( is_front_page() && is_home() ) :
+						?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<?php
+					else :
+						?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<?php
+					endif;
+					$hotcoffee_description = get_bloginfo( 'description', 'display' );
+					if ( $hotcoffee_description || is_customize_preview() ) :
+						?>
+						<p class="site-description"><?php echo $hotcoffee_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+						<?php 
+			
+					endif; 
+				}
+						?>
+			</div><!-- .site-branding -->
+
+			<div class="large-4 cell order-links">
+				<a href=""><img src="http://hotchat.local/wp-content/themes/hotcoffee/assets/img/search_icon.png"></a>&nbsp; &nbsp;
+				<a href=""><img src="http://hotchat.local/wp-content/themes/hotcoffee/assets/img/user.png"></a>&nbsp; &nbsp;
+				<a href=""><img src="http://hotchat.local/wp-content/themes/hotcoffee/assets/img/Cart.png"></a>
+			</div>
+
+		</div><!-- close top nav -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<div class="grid-x grid-padding-x grid-margin-x top-nav">
-				<div class="large-4 cell"></div>
-				<div class="large-4 cell logo">
-					<img src="http://hotchat.local/wp-content/themes/hotcoffee/assets/img/logo_final.png">
-				</div>
-				<div class="large-4 cell order-links">
-					<a href=""><img src="http://hotchat.local/wp-content/themes/hotcoffee/assets/img/search_icon.png"></a>&nbsp; &nbsp;
-					<a href=""><img src="http://hotchat.local/wp-content/themes/hotcoffee/assets/img/user.png"></a>&nbsp; &nbsp;
-					<a href=""><img src="http://hotchat.local/wp-content/themes/hotcoffee/assets/img/Cart.png"></a>
-				</div>
-        	</div>
-
 			<div class="grid-x grid-padding-x grid-margin-x bottom-nav">
 				<div class="large-4 cell"></div>
 				<div class="large-4 cell menu-links">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'hotcoffee' ); ?></button>
 				<?php
+				if (has_nav_menu( 'menu-primary' )){
 					wp_nav_menu(
 						array(
 							'theme_location' => 'menu-primary',
 							'menu_id'        => 'primary-menu',
 						)
 					);
+				}	
 				?>
 				</div>
 				<div class="large-4 cell"></div>

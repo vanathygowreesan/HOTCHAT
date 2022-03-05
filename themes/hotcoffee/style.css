@@ -34,8 +34,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 
-.site-title, .site-description, .entry-title, .menu-toggle, .custom-logo-link{
+.site-title, .site-description, .entry-title{
     display: none;
+}
+
+.site-branding{
+    background-color: #1b1b1b;
 }
 
 .menu-our-story-container{
@@ -64,6 +68,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 
 /* Footer styling */
+
 
 .site-info, .entry-footer{
     display:none;
@@ -101,6 +106,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     text-align: center;
     padding-top: 1rem;
 }
+
 
 #secondary{
     display:none;

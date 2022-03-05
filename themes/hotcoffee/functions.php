@@ -50,6 +50,9 @@ function hotcoffee_setup() {
 	register_nav_menus(
 		array(
 			'menu-primary' => esc_html__( 'Primary', 'hotcoffee' ),
+			'menu-secondary' => esc_html__( 'Secondary', 'hotcoffee' ),
+			'menu-footer' => esc_html__( 'Footer', 'hotcoffee' ),
+			'menu-social' => esc_html__( 'Social', 'hotcoffee' ),
 		)
 	);
 
@@ -85,6 +88,7 @@ function hotcoffee_setup() {
 			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
+			'unlink-homepage-logo' => false,
 		)
 	);
 }

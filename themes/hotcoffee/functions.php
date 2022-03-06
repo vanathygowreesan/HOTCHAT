@@ -50,9 +50,13 @@ function hotcoffee_setup() {
 	register_nav_menus(
 		array(
 			'menu-primary' => esc_html__( 'Primary', 'hotcoffee' ),
+			'menu-shop' => esc_html__( 'Shop', 'hotcoffee' ),
+			'menu-search' => esc_html__( 'Search', 'hotcoffee' ),
 			'menu-secondary' => esc_html__( 'Secondary', 'hotcoffee' ),
-			'menu-footer' => esc_html__( 'Footer', 'hotcoffee' ),
 			'menu-social' => esc_html__( 'Social', 'hotcoffee' ),
+			'menu-footer1' => esc_html__( 'Footer1', 'hotcoffee' ),
+			'menu-footer2' => esc_html__( 'Footer2', 'hotcoffee' ),
+			'menu-footer3' => esc_html__( 'Footer3', 'hotcoffee' ),
 		)
 	);
 

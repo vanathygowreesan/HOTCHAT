@@ -41,6 +41,142 @@ function hotcoffee_customize_register( $wp_customize ) {
 	)));
 
 
+	/* Add customizer api to custom icons */
+
+	$wp_customize->add_panel('hotcoffee_custom_icons',array(
+		'title' => esc_html__( 'Custom Icons', 'hotcoffee' ),
+	));
+
+	/* Add customizer api to login */
+	$wp_customize->add_section('hotcoffee_login',array(
+		'title' => esc_html__( 'Login', 'hotcoffee' ),
+		'panel' => 'hotcoffee_custom_icons',
+	));
+
+	$wp_customize->add_setting( 'hotcoffee_login_title' );
+
+	$wp_customize->add_control( 'hotcoffee_login_title', array(
+		'label' => 'Title',
+		'description' => 'Enter your login title',
+		'section' => 'hotcoffee_login',
+	));
+
+	$wp_customize->add_setting( 'hotcoffee_login_url' );
+
+	$wp_customize->add_control( 'hotcoffee_login_url', array(
+		'label' => 'URL',
+		'description' => 'Enter your login link',
+		'type' => 'url',
+		'section' => 'hotcoffee_login',
+	));
+
+	/* login Icon */
+	$wp_customize->add_setting( 'hotcoffee_login_icon' );
+
+	$wp_customize->add_control( new WP_Customize_Media_Control ($wp_customize, 'hotcoffee_login_icon', array(
+		'label' => 'Icon',
+		'section' => 'hotcoffee_login',
+	)));
+
+	/* Add customizer api to create account */
+	$wp_customize->add_section('hotcoffee_create_account',array(
+		'title' => esc_html__( 'Createaccount', 'hotcoffee' ),
+		'panel' => 'hotcoffee_custom_icons',
+	));
+
+	$wp_customize->add_setting( 'hotcoffee_create_account_title' );
+
+	$wp_customize->add_control( 'hotcoffee_create_account_title', array(
+		'label' => 'Title',
+		'description' => 'Enter your title',
+		'section' => 'hotcoffee_create_account',
+	));
+
+	$wp_customize->add_setting( 'hotcoffee_create_account_url' );
+
+	$wp_customize->add_control( 'hotcoffee_create_account_url', array(
+		'label' => 'URL',
+		'description' => 'Enter your Create Account link',
+		'type' => 'url',
+		'section' => 'hotcoffee_create_account',
+	));
+
+	/* Create account Icon */
+	$wp_customize->add_setting( 'hotcoffee_create_account_icon' );
+
+	$wp_customize->add_control( new WP_Customize_Media_Control ($wp_customize, 'hotcoffee_create_account_icon', array(
+		'label' => 'Icon',
+		'section' => 'hotcoffee_create_account',
+	)));
+
+
+
+	/* Add customizer api to cart */
+	$wp_customize->add_section('hotcoffee_cart',array(
+		'title' => esc_html__( 'Cart', 'hotcoffee' ),
+		'panel' => 'hotcoffee_custom_icons',
+	));
+
+	$wp_customize->add_setting( 'hotcoffee_cart_title' );
+
+	$wp_customize->add_control( 'hotcoffee_cart_title', array(
+		'label' => 'Title',
+		'description' => 'Enter your title',
+		'section' => 'hotcoffee_cart',
+	));
+
+	$wp_customize->add_setting( 'hotcoffee_cart_url' );
+
+	$wp_customize->add_control( 'hotcoffee_cart_url', array(
+		'label' => 'URL',
+		'description' => 'Enter your Cart link',
+		'type' => 'url',
+		'section' => 'hotcoffee_cart',
+	));
+
+	/* Create account Icon */
+	$wp_customize->add_setting( 'hotcoffee_cart_icon' );
+
+	$wp_customize->add_control( new WP_Customize_Media_Control ($wp_customize, 'hotcoffee_cart_icon', array(
+		'label' => 'Icon',
+		'section' => 'hotcoffee_cart',
+	)));
+
+
+	/* Add customizer api to Search */
+	$wp_customize->add_section('hotcoffee_search',array(
+		'title' => esc_html__( 'Search', 'hotcoffee' ),
+		'panel' => 'hotcoffee_custom_icons',
+	));
+
+	$wp_customize->add_setting( 'hotcoffee_search_title' );
+
+	$wp_customize->add_control( 'hotcoffee_search_title', array(
+		'label' => 'Title',
+		'description' => 'Enter your title',
+		'section' => 'hotcoffee_search',
+	));
+
+	$wp_customize->add_setting( 'hotcoffee_search_url' );
+
+	$wp_customize->add_control( 'hotcoffee_search_url', array(
+		'label' => 'URL',
+		'description' => 'Enter your link',
+		'type' => 'url',
+		'section' => 'hotcoffee_search',
+	));
+
+	/* Create account Icon */
+	$wp_customize->add_setting( 'hotcoffee_search_icon' );
+
+	$wp_customize->add_control( new WP_Customize_Media_Control ($wp_customize, 'hotcoffee_search_icon', array(
+		'label' => 'Icon',
+		'section' => 'hotcoffee_search',
+	)));
+
+
+		
+
 	/* Add customizer api to social media */
 
 	$wp_customize->add_panel('hotcoffee_social_media',array(

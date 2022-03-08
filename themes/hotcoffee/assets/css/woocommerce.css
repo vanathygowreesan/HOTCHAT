@@ -64,4 +64,20 @@ bdi{
 }
 
 
+/* product single page styling for product description */
 
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt {
+    background-color: #b08764;
+}
+
+.tabs {
+    border: none;
+    background: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    color: #693013;
+}

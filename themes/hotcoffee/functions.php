@@ -148,6 +148,13 @@ function hotcoffee_scripts() {
 		'6.7.4'
 	);
 
+	//enqueue woocommerce style
+	wp_enqueue_style( 
+		'woocommerce-style', 
+		get_template_directory_uri() . '/assets/css/woocommerce.css',
+	);
+
+
 	wp_enqueue_script( 
 		'what-input-script', 
 		get_template_directory_uri() . '/assets/js/vendor/what-input.js',

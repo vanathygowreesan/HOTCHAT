@@ -9,8 +9,16 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="grid-x grid-padding-x grid-margin-x">
+	<div class="large-12 small-12 cell">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+	
+	</header><!-- .entry-header --> 
+
+	<?php hotcoffee_post_thumbnail(); ?>
+
+	<div class="entry-content">
 		<?php
 
 		if (! is_singular('product')){
@@ -30,11 +38,7 @@
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
-	</header><!-- .entry-header -->
 
-	<?php hotcoffee_post_thumbnail(); ?>
-
-	<div class="entry-content">
 		<?php
 		the_content(
 			sprintf(
@@ -50,6 +54,7 @@
 				wp_kses_post( get_the_title() )
 			)
 		);
+		
 
 		wp_link_pages(
 			array(
@@ -59,6 +64,10 @@
 		);
 		?>
 	</div><!-- .entry-content -->
+
+	</div>
+</div>
+
 
 	<footer class="entry-footer">
 		<?php hotcoffee_entry_footer(); ?>

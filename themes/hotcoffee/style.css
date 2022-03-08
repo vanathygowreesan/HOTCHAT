@@ -25,12 +25,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Header styling */
 .top-nav{
     background-color: #1b1b1b;
-    padding: 1rem;
+    padding:1rem;
 }
 
 .bottom-nav{
     background-color: black;
-    padding: 1rem;
+    padding:1rem;
 }
 
 
@@ -38,9 +38,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     display: none;
 }
 
-.site-branding{
-    background-color: #1b1b1b;
-}
 
 .menu-our-story-container{
     background-color: black;
@@ -56,6 +53,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     text-align: center;
 }
 
+.order-menu{
+    display:flex;
+}
+
+.order-menu a{
+    color:white;
+    padding:1rem;
+}
 
 .main-navigation{
     padding-bottom: 1rem;
@@ -65,7 +70,44 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     text-align: center;
 }
 
+.menu-links a{
+    text-decoration: none;
+    color:white;
+}
 
+.menu-links a:hover{
+    text-decoration: none;
+    color:#b08764;
+    font-weight: bolder;
+}
+
+
+/* Search styling */
+form {
+    color: #555;
+    background:white;
+    display: flex;
+    padding: 2px;
+    
+    border-radius: 5px;
+  }
+
+  input[type="search"] {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+  }
+  
+  input[type="search"]::placeholder {
+    color: #bbb;
+  }
+
+  
 
 /* Footer styling */
 
@@ -87,9 +129,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     font-size: medium;
 }
 
-.footer-list{
+.footer-list, .social-media-menu{
     list-style-type: none;
-    
+}
+
+.social-media-menu {
+    display: flex;
 }
 
 .footer-list li a{
@@ -112,3 +157,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     display:none;
 }
 
+.footer-third-col, .footer-fourth-col{
+    text-decoration: none;
+    color: white;
+}

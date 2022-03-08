@@ -1,0 +1,67 @@
+/*
+.single-product .product{
+    display:flex;
+}
+
+.single-product .product{
+    display:flex;
+}
+
+.single-product .woocommerce-product-gallery,
+.single-product .entry-summery{
+    max-width: 500px;
+} */
+
+span .onsale{
+    background:#b08764;
+}
+
+#tab-description{
+    background:white;
+    padding:1rem;
+    border: 1px solid #693013;
+}
+
+
+h2{
+    color:#693013;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+bdi{
+    color:black;
+}
+
+
+/* Product block styling */
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    background-color: white;
+    box-shadow: 5px 10px 18px lightgray;
+    height:400px;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
+    padding: 0 1rem;
+}
+
+.woocommerce ul.products li.product .price {
+    padding: 0 1rem;
+    margin-bottom: .5em;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.woocommerce span.onsale {
+    background-color: #693013;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+    color: white;
+    background-color: #b08764;
+    margin: 1rem 1rem;
+}
+
+
+

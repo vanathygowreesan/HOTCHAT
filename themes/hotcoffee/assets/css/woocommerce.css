@@ -39,7 +39,7 @@ bdi{
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
     background-color: white;
     box-shadow: 5px 10px 18px lightgray;
-    height:400px;
+    height:420px;
 }
 
 .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
@@ -60,7 +60,18 @@ bdi{
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
     color: white;
     background-color: #b08764;
-    margin: 1rem 1rem;
+    margin: 0 1rem;
+}
+
+.woocommerce a.added_to_cart {
+    padding-top: 0;
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+.label {
+    background: none;
+    color: #693013;
 }
 
 
@@ -80,4 +91,23 @@ bdi{
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
     color: #693013;
+}
+
+.nav-previous{
+    float:left;
+    padding-left:2rem;
+}
+
+a {
+    color: #693013;
+}
+
+a:hover{
+    font-weight: bolder;
+    color: #693013;
+}
+
+.nav-next{
+    float:right;
+    padding-right:2rem;
 }

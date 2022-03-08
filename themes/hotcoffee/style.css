@@ -161,3 +161,46 @@ form {
     text-decoration: none;
     color: white;
 }
+
+/* Comment stying */
+.comment-reply-title{
+    color:#693013;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.more-link{
+    color:#693013;
+    padding:1rem;
+    border: solid #693013;
+    background-color: white;
+    float: right;
+}
+
+.comments-area{
+    width:100%;
+}
+
+.comment-para{
+    text-align: center;
+}
+
+input[type="submit" i] {
+    appearance: auto;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-end;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: #b08764;
+    color: white;
+    padding: 1rem;
+    border-width: 2px;
+    border-style: outset;
+    border-color: none;
+}
+
+.more_link a{
+    text-align: center;
+}

@@ -11,7 +11,8 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
+	<div class="grid-x grid-padding-x grid-margin-x">
+		<div class="large-12 small-12 cell">
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -33,6 +34,8 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
+		<div>
+	</div>
 	</main><!-- #main -->
 
 <?php

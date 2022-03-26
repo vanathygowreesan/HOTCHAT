@@ -77,6 +77,13 @@ function hotcoffee_setup() {
 		)
 	);
 
+
+
+	// Add theme support for post thumbnail.
+	//add_theme_support( 'post-thumbnail');
+
+
+
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -202,5 +209,9 @@ require get_template_directory() . '/inc/block-editor.php';
  */
 require get_template_directory() . '/inc/woocommerce.php';
 
+/**
+ * Custom post type additions.
+ */
+require get_template_directory() . '/inc/post-types.php';
 
 

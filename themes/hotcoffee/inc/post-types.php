@@ -43,7 +43,7 @@ function hotcoffee_post_types() {
         'capability_type'    => 'post',
         'has_archive'        => 'recipes',
         'hierarchical'       => false,
-        'menu_position'      => 20,
+        'menu_position'      => 5,
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail' ),
         'taxonomies'         => array( 'category', 'post_tag' ),
         'show_in_rest'       => true

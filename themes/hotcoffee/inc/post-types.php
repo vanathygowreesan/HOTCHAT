@@ -49,6 +49,6 @@ function hotcoffee_post_types() {
         'show_in_rest'       => true
     );
       
-    register_post_type( 'hotcofee_recipe', $args );
+    register_post_type( 'hotcoffee_recipe', $args );
 }
 add_action( 'init', 'hotcoffee_post_types' );

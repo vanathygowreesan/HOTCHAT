@@ -3,46 +3,53 @@
     color:black;
 }
 
+/* Fancy Quate  color styling */
 .wp-block-quote.is-style-fancy-quote{
     color: #653312;
     font-weight: bolder;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
+/* custom button style */
 .wp-block-button.is-style-fill-button{
     background-color: #b08764;
 }
 
+/* custom button without fill (only outline style */
 .wp-block-button.is-style-outline-button{
     border:#b08764 solid 2px;
     background-color: transparent;
 }
 
+/* custom main heading style */
 .wp-block-heading.is-style-main-heading{
     color: #653312;
     font-size: 35px;
     font-weight: bolder;
 }
 
+/* custom sub heading style*/
 .wp-block-heading.is-style-sub-heading{
     color: #b08764;
     font-size: 24px;
     font-weight: bolder;
 }
 
-.entry-content > * :not(.woocommerce){
+/* entry content size defined */
+.entry-content > *{
     max-width: 1000px;
     margin-left:auto;
     margin-right: auto;
 }
 
-.entry-content > * .alignwide,
+/* assigned the width of alignwide */
 .alignwide{
     max-width:1200px;
 }
 
-.entry-content > * .alignfull,
+/* assigned the width of alignfull */
 .alignfull {
     max-width: 100%;
 }
+
+

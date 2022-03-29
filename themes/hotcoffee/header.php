@@ -28,9 +28,9 @@
 		<div class="grid-x grid-padding-x grid-margin-x top-nav">
 			<div class="large-4 cell"></div>
 
-			<div class="large-4 small-12 cell site-branding">
+			<div class="large-4 medium-4 small-12 cell site-branding">
 				<?php
-
+				// conditional tag to check the custom logo available and run the function to display the front page when clicked
 				if (! empty (get_custom_logo())){
 					the_custom_logo();
 
@@ -59,6 +59,7 @@
 			<!-- order links -->
 			<div class="order-links">
 				<ul class="large-4 small-12 cell order-menu">
+					<!-- Conditional tag used to display the custom login icon -->
 					<?php if (!empty (get_theme_mod('hotcoffee_login_url')) && !empty(get_theme_mod ('hotcoffee_login_title'))){ ?>
 						<li>
 							<a href="<?php echo esc_url (get_theme_mod('hotcoffee_login_url')); ?>">
@@ -78,6 +79,8 @@
 					<?php if (!empty (get_theme_mod('hotcoffee_cart_url')) && !empty(get_theme_mod ('hotcoffee_cart_title'))){ ?>
 						<li>
 							<a href="<?php echo esc_url (get_theme_mod('hotcoffee_cart_url')); ?>">
+
+							<!-- Conditional tag used to display the custom cart icon -->
 							<?php
 							if (!empty (get_theme_mod('hotcoffee_cart_icon'))){
 								echo wp_get_attachment_image (get_theme_mod('hotcoffee_cart_icon'), array('30', '30'));
@@ -113,9 +116,10 @@
 		<nav id="site-navigation" class="main-navigation">
 			<div class="grid-x grid-padding-x grid-margin-x bottom-nav">
 				<div class="large-4 cell"></div>
-				<div class="large-4 small-12 cell menu-links">
+				<div class="large-4 medium-4 small-12 cell menu-links">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'hotcoffee' ); ?></button>
 					<?php
+						// Conditional tags to display primary menu
 						if (has_nav_menu( 'menu-primary' )){
 							wp_nav_menu(
 								array(
@@ -128,10 +132,11 @@
 				</div> <!-- Close primary menu -->
 
 				<!-- Search bar -->
-				<div class="large-4 cell">
+				<div class="large-4 small-12 cell">
 					<form>
   						<input type="search" placeholder="Search...">
   						<button type="submit">
+						  <!-- Conditional tags to search title -->
 						  <?php if (!empty (get_theme_mod('hotcoffee_search_url')) && !empty(get_theme_mod ('hotcoffee_search_title'))){ ?>
 						
 							<a href="<?php echo esc_url (get_theme_mod('hotcoffee_search_url')); ?>">

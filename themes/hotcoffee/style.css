@@ -21,3 +21,183 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+/* Header styling */
+.top-nav{
+    background-color: #1b1b1b;
+    padding:1rem;
+}
+
+.bottom-nav{
+    background-color: black;
+    padding:1rem;
+}
+
+
+.site-title, .site-description, .entry-title{
+    display: none;
+}
+
+
+.menu-our-story-container{
+    background-color: black;
+}
+
+.menu-our-story-container a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.logo{
+    text-align: center;
+}
+
+.order-menu{
+    display:flex;
+}
+
+.order-menu a{
+    color:white;
+    padding:1rem;
+}
+
+.main-navigation{
+    padding-bottom: 1rem;
+}
+
+#primary-menu .menu ul{
+    text-align: center;
+}
+
+.menu-links a{
+    text-decoration: none;
+    color:white;
+}
+
+.menu-links a:hover{
+    text-decoration: none;
+    color:#b08764;
+    font-weight: bolder;
+}
+
+
+/* Search styling */
+form {
+    color: #555;
+    background:white;
+    display: flex;
+    padding: 2px;
+    
+    border-radius: 5px;
+  }
+
+  input[type="search"] {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+  }
+  
+  input[type="search"]::placeholder {
+    color: #bbb;
+  }
+  
+  
+/* Footer styling */
+.site-info, .entry-footer{
+    display:none;
+}
+
+.site-footer{
+    background-color: black;
+    padding:1rem;
+    color:white;
+    border-top: #b08764 solid 5px;
+}
+
+.footer-heading{
+    color:#b08764;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+.footer-list, .social-media-menu{
+    list-style-type: none;
+}
+
+.social-media-menu {
+    display: flex;
+}
+
+.footer-list li a{
+    color:white;
+    text-decoration: none;
+}
+
+.top-footer-wrapper{
+    border-bottom: #b08764 solid 1px;
+    padding-bottom:1rem;
+}
+
+.copy-rights{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+/*
+#secondary{
+    display:none;
+} */
+
+.footer-third-col, .footer-fourth-col{
+    text-decoration: none;
+    color: white;
+}
+
+/* Comment stying */
+.comment-reply-title{
+    color:#693013;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.more-link{
+    color:#693013;
+    padding:1rem;
+    border: solid #693013;
+    background-color: white;
+    float: right;
+}
+
+.comments-area{
+    width:100%;
+}
+
+.comment-para{
+    text-align: center;
+}
+
+input[type="submit" i] {
+    appearance: auto;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-end;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: #b08764;
+    color: white;
+    padding: 1rem;
+    border-width: 2px;
+    border-style: outset;
+    border-color: none;
+}
+
+.more_link a{
+    text-align: center;
+}

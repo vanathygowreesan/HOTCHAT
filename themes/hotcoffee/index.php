@@ -17,6 +17,8 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+	<div class="grid-x grid-padding-x grid-margin-x">
+		<div class="large-12 small-12 cell">
 		<?php
 		if ( have_posts() ) :
 
@@ -50,6 +52,10 @@ get_header();
 		endif;
 		?>
 
+
+		</div>
+	</div>
+		
 	</main><!-- #main -->
 
 <?php

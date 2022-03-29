@@ -49,7 +49,14 @@ function hotcoffee_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'hotcoffee' ),
+			'menu-primary' => esc_html__( 'Primary', 'hotcoffee' ),
+			'menu-shop' => esc_html__( 'Shop', 'hotcoffee' ),
+			'menu-search' => esc_html__( 'Search', 'hotcoffee' ),
+			'menu-secondary' => esc_html__( 'Secondary', 'hotcoffee' ),
+			'menu-social' => esc_html__( 'Social', 'hotcoffee' ),
+			'menu-footer1' => esc_html__( 'Footer1', 'hotcoffee' ),
+			'menu-footer2' => esc_html__( 'Footer2', 'hotcoffee' ),
+			'menu-footer3' => esc_html__( 'Footer3', 'hotcoffee' ),
 		)
 	);
 
@@ -70,6 +77,13 @@ function hotcoffee_setup() {
 		)
 	);
 
+
+
+	// Add theme support for post thumbnail.
+	//add_theme_support( 'post-thumbnail');
+
+
+
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -85,6 +99,7 @@ function hotcoffee_setup() {
 			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
+			'unlink-homepage-logo' => false,
 		)
 	);
 }
@@ -126,7 +141,42 @@ add_action( 'widgets_init', 'hotcoffee_widgets_init' );
  * Enqueue scripts and styles.
  */
 function hotcoffee_scripts() {
-	wp_enqueue_style( 'hotcoffee-style', get_stylesheet_uri(), array(), HOTCOFFEE_VERSION );
+	wp_enqueue_style(
+		 'hotcoffee-style', 
+		get_stylesheet_uri(),
+		array(), 
+		HOTCOFFEE_VERSION 
+	);
+
+	wp_enqueue_style( 
+		'foundation-style', 
+		get_template_directory_uri() . '/assets/css/vendor/foundation.min.css',
+		array(), 
+		'6.7.4'
+	);
+
+	//enqueue woocommerce style
+	wp_enqueue_style( 
+		'woocommerce-style', 
+		get_template_directory_uri() . '/assets/css/woocommerce.css',
+	);
+
+
+	wp_enqueue_script( 
+		'what-input-script', 
+		get_template_directory_uri() . '/assets/js/vendor/what-input.js',
+		array('jquery'), 
+		'5.2.10',
+		true
+	);
+
+	wp_enqueue_script( 
+		'foundation-script', 
+		get_template_directory_uri() . '/assets/js/vendor/foundation.min.js',
+		array('jquery'), 
+		'6.7.4',
+		true
+	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -148,5 +198,20 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Block editor additions.
+ */
+require get_template_directory() . '/inc/block-editor.php';
+
+/**
+ * Woocommerce additions.
+ */
+require get_template_directory() . '/inc/woocommerce.php';
+
+/**
+ * Custom post type additions.
+ */
+require get_template_directory() . '/inc/post-types.php';
 
 

@@ -17,7 +17,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			echo'This is the single recipe template';
+			//echo'This is the single recipe template';
 
 			get_template_part( 'template-parts/content', get_post_type() );
 

@@ -22,53 +22,62 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-/* Header styling */
+/*! Header styling */
+/* 
+** header top nav section background color set
+** padding set to 1rem
+*/
+
 .top-nav{
     background-color: #1b1b1b;
     padding:1rem;
 }
+
+/* 
+** header bottom nav section background color set to black
+** padding set to 1rem
+*/
 
 .bottom-nav{
     background-color: black;
     padding:1rem;
 }
 
-
+/* 
+** site title, site description and entry title is disabled
+*/
 .site-title, .site-description, .entry-title{
     display: none;
 }
 
-
-.menu-our-story-container{
-    background-color: black;
-}
-
-.menu-our-story-container a{
-    color: white;
-    text-decoration: none;
-    text-align: center;
-}
-
-.logo{
-    text-align: center;
-}
+/* 
+** log in and cart link set to appear next to each other
+*/
 
 .order-menu{
     display:flex;
 }
 
+/* 
+** log in and cart link color set to white
+** log in and cart link padding set to 1rem
+*/
 .order-menu a{
     color:white;
     padding:1rem;
 }
 
+/* 
+** main menu padding bottom set to 1rem to give spacing for the main body/content
+*/
 .main-navigation{
     padding-bottom: 1rem;
 }
 
-#primary-menu .menu ul{
-    text-align: center;
-}
+/* 
+** primary menu link color
+** primary menu hover color
+*/
 
 .menu-links a{
     text-decoration: none;
@@ -82,7 +91,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 
-/* Search styling */
+/* ! Search styling */
 form {
     color: #555;
     background:white;
@@ -107,11 +116,22 @@ form {
     color: #bbb;
   }
   
-  
-/* Footer styling */
+
+/* ! Footer styling */
+/* 
+** footer section site info disabled
+*/
+
 .site-info, .entry-footer{
     display:none;
 }
+
+/* 
+** footer background
+** footer border
+** footer font color
+** footer padding set
+*/
 
 .site-footer{
     background-color: black;
@@ -120,44 +140,66 @@ form {
     border-top: #b08764 solid 5px;
 }
 
+/* 
+** footer heading styling
+*/
+
 .footer-heading{
     color:#b08764;
     font-weight: bolder;
     font-size: medium;
 }
 
+/* 
+** disabled the bullets
+*/
 .footer-list, .social-media-menu{
     list-style-type: none;
 }
 
+/* 
+** social media icons wrap to display next to each other
+*/
 .social-media-menu {
     display: flex;
 }
+
+/* 
+** footer list link stying done
+*/
 
 .footer-list li a{
     color:white;
     text-decoration: none;
 }
 
+/* 
+** spacing given between the top-footer and the custom post
+*/
+
 .top-footer-wrapper{
-    border-bottom: #b08764 solid 1px;
     padding-bottom:1rem;
 }
 
+/* 
+** copyrights styling
+*/
+
 .copy-rights{
+    border-top: #b08764 solid 1px;
     text-align: center;
     padding-top: 1rem;
 }
 
-/*
-#secondary{
-    display:none;
-} */
+/* 
+** footer section styling
+*/
 
 .footer-third-col, .footer-fourth-col{
     text-decoration: none;
     color: white;
 }
+
 
 /* Comment stying */
 .comment-reply-title{
@@ -200,4 +242,11 @@ input[type="submit" i] {
 
 .more_link a{
     text-align: center;
+}
+
+
+/* Mobile View styling using media query */
+
+@media only screen and (max-width: 600px) {
+
 }

@@ -12,12 +12,14 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+
 		<div class="grid-x grid-padding-x grid-margin-x top-footer-wrapper">
 			
 			<div class="large-3 cell footer-first-col">
 				<div class="site-branding">
 					<?php
 
+					// Conditional tags to display the front page on clicking the logo
 					if (! empty (get_custom_logo())){
 						the_custom_logo();
 
@@ -50,6 +52,7 @@
 						<li>
 							<a href="<?php echo esc_url (get_theme_mod('hotcoffee_facebook_url')); ?>">
 							<?php
+							// Conditional tags to display facebook icon
 							if (!empty (get_theme_mod('hotcoffee_facebook_icon'))){
 								echo wp_get_attachment_image (get_theme_mod('hotcoffee_facebook_icon'), array('40', '40'));
 							} else {
@@ -65,6 +68,7 @@
 						<li>
 							<a href="<?php echo esc_url (get_theme_mod('hotcoffee_twitter_url')); ?>">
 							<?php
+							// Conditional tags to display twitter icon
 							if (!empty (get_theme_mod('hotcoffee_twitter_icon'))){
 								echo wp_get_attachment_image (get_theme_mod('hotcoffee_twitter_icon'), array('40', '40'));
 							} else {
@@ -79,6 +83,7 @@
 						<li>
 							<a href="<?php echo esc_url (get_theme_mod('hotcoffee_whatsapp_url')); ?>">
 							<?php
+							// Conditional tags to display whatsapp icon
 							if (!empty (get_theme_mod('hotcoffee_whatsapp_icon'))){
 								echo wp_get_attachment_image (get_theme_mod('hotcoffee_whatsapp_icon'), array('40', '40'));
 							} else {
@@ -93,6 +98,7 @@
 						<li>
 							<a href="<?php echo esc_url (get_theme_mod('hotcoffee_instagram_url')); ?>">
 							<?php
+							// Conditional tags to display instagram icon
 							if (!empty (get_theme_mod('hotcoffee_instagram_icon'))){
 								echo wp_get_attachment_image (get_theme_mod('hotcoffee_instagram_icon'), array('40', '40'));
 							} else {
@@ -107,6 +113,7 @@
 						<li>
 							<a href="<?php echo esc_url (get_theme_mod('hotcoffee_youtube_url')); ?>">
 							<?php
+							// Conditional tags to display youtube icon
 							if (!empty (get_theme_mod('hotcoffee_youtube_icon'))){
 								echo wp_get_attachment_image (get_theme_mod('hotcoffee_youtube_icon'), array('40', '40'));
 							} else {
@@ -135,6 +142,7 @@
 				<ul class="footer-list">
 					<li>
 						<?php
+						// Conditional tags to chech the footer nav and display
 						if (has_nav_menu( 'menu-footer1' )){
 							wp_nav_menu(
 								array(
@@ -155,6 +163,7 @@
 				<ul class="footer-list">
 					<li>
 						<?php
+						// Conditional tags to chech the footer nav and display
 						if (has_nav_menu( 'menu-footer2' )){
 							wp_nav_menu(
 								array(
@@ -173,6 +182,7 @@
 				<ul class="footer-list">
 					<li>
 						<?php
+						// Conditional tags to chech the footer nav and display
 						if (has_nav_menu( 'menu-footer3' )){
 							wp_nav_menu(
 								array(
@@ -189,6 +199,42 @@
 				<img src="http://hotchat.local/wp-content/themes/hotcoffee/assets/img/coffee-cup.png">
 			</div>
         </div>
+
+		<!-- Custom WP_Query for a new post (recipe) type -->
+		<?php
+		$recipe_args = array (
+			'post_type'			=> array('hotcoffee_recipe'),
+			'posts_status'		=> 'publish',
+			'posts_per_page'	=> 3,
+			//'orderby'			=> 'rand',
+			'orderby'			=> 'date',
+			'post_note_in'		=> array(get_the_ID())
+		);
+
+		$recipe_query = new WP_query ( $recipe_args);
+
+			if ($recipe_query -> have_posts()){
+			?>
+
+		<div class="grid-x grid-padding-x grid-margin-x">
+			<?php
+			while ($recipe_query-> have_posts()){
+				$recipe_query->the_post();?>
+
+			<div class="large-4 medium-4 small-12 cell">
+				<?php
+				the_post_thumbnail();
+				the_title('<h3>','</h3>');
+				the_excerpt();
+				?>
+			</div>
+			<?php
+			}
+			wp_reset_postdata(); 
+			?>
+        </div>
+		<?php
+		} ?>
 
 		<div class="grid-x grid-padding-x grid-margin-x">
 			<div class="large-12 small-12 cell copy-rights">

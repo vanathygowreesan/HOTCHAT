@@ -106,12 +106,9 @@ form {
   input[type="search"]::placeholder {
     color: #bbb;
   }
-
   
-
+  
 /* Footer styling */
-
-
 .site-info, .entry-footer{
     display:none;
 }
@@ -152,10 +149,10 @@ form {
     padding-top: 1rem;
 }
 
-
+/*
 #secondary{
     display:none;
-}
+} */
 
 .footer-third-col, .footer-fourth-col{
     text-decoration: none;

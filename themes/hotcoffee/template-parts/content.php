@@ -20,7 +20,7 @@
 
 	<div class="entry-content">
 		<?php
-
+		// Conditonal tag used to display the product single
 		if (! is_singular('product')){
 			if ( is_singular() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
